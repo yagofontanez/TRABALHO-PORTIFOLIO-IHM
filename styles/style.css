@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --principal: #8E2DE2;
+    --secondary: #4A00E0;
+    --dark-principal: #4c008e;
+    --white: #fff;
+}
+
+
+body {
+    background: linear-gradient(to right, var(--principal), var(--secondary));
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/images/bgdgif.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 4rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 3rem;
+}
+
+.text-logo {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.text-logo:hover {
+    transform: scale(1.1);
+}
+
+.text-logo a {
+    color: var(--white);
+}
+
+.ul-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.ul-navbar li a {
+    color: var(--white);
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+#home {
+    color: var(--dark-principal);
+    font-weight: 800;
+}
+
+.ul-navbar li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; 
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+#home::after {
+    background-color: var(--dark-principal);
+}
+
+.ul-navbar li a:hover {
+    color: var(--white);
+}
+
+#home:hover {
+    color: var(--dark-principal);
+}
+
+.ul-navbar li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-yago {
+    border-radius: 50%;
+}
+
+
+.container-textos-main {
+    text-align: center;
+}
+
+.container-textos-main h1 {
+    color: var(--white);
+}

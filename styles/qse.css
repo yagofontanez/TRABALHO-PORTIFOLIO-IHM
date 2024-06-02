@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --principal: #8E2DE2;
+    --secondary: #4A00E0;
+    --dark-principal: #4c008e;
+    --white: #fff;
+}
+
+
+body {
+    background: linear-gradient(to right, var(--principal), var(--secondary));
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/images/bgdgif.gif') no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 4rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 3rem;
+}
+
+.text-logo {
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.text-logo:hover {
+    transform: scale(1.1);
+}
+
+.text-logo a {
+    color: var(--white);
+}
+
+.ul-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 18px;
+}
+
+.ul-navbar li a {
+    color: var(--white);
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+#qse {
+    color: var(--dark-principal);
+    font-weight: 800;
+}
+
+.ul-navbar li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px; 
+    width: 100%;
+    height: 3px;
+    background-color: var(--white);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+#qse::after {
+    background-color: var(--dark-principal);
+}
+
+.ul-navbar li a:hover {
+    color: var(--white);
+}
+
+#qse:hover {
+    color: var(--dark-principal);
+}
+
+.ul-navbar li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10rem 5rem;
+    gap: 2rem;
+}
+
+#cont-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #8d2de260;
+    backdrop-filter: blur(10px);
+    width: 30rem;
+    height: 18rem;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.4s ease;
+    cursor: default;
+}
+
+#cont-info:hover {
+    transform: scale(1.1);
+}
+
+#cont-info h2 {
+    color: var(--dark-principal);
+}
+
+.container p {
+    color: var(--white);
+}
+
+.container p span {
+    color: var(--dark-principal);
+    font-weight: 800;
+}
