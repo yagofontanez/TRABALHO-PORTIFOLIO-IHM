@@ -30,7 +30,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('/images/bgdgif.gif') no-repeat;
+    background: url('/images/bgdgif.gif') repeat;
     background-size: cover;
     opacity: 0.5;
     z-index: -1;
@@ -149,4 +149,41 @@ body::before {
 .container p span {
     color: var(--dark-principal);
     font-weight: 800;
+}
+
+
+@media (max-width: 1085px) {
+    body {
+        overflow: scroll;
+    }
+
+    body::before {
+        background-size: cover;
+    }
+
+    .container-infos {
+        justify-content: flex-start;
+    }
+
+    #cont-info {
+        width: 30rem;
+        height: 18rem;
+        overflow: scroll;
+    }
+}
+
+@media (max-width: 690px) {
+    .container-infos {
+        flex-direction: column;
+    }
+
+    body::before {
+        background: linear-gradient(to right, var(--principal), var(--secondary));
+    }
+
+    #cont-info {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+    }
 }

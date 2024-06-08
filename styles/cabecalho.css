@@ -1,0 +1,13 @@
+@media (max-width: 690px) {
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 510px) {
+    .ul-navbar {
+        flex-direction: column;
+    }
+}
