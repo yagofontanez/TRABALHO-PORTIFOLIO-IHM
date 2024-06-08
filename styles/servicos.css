@@ -120,14 +120,13 @@ a {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin-top: -25px;
+    margin-top: 5rem;
 }
 
 .containeres-servicos {
-    max-height: 500px;
+    max-height: 475px;
     overflow-y: scroll;
-    /* padding-top: 610px; */
-    padding: 2rem 0;
+    padding: 1rem 0;
 }
 
 .containeres-textos {
@@ -152,6 +151,7 @@ a {
 #service img {
     border-radius: 15px;
     /* width: 100%; */
+    height: 100%;
 }
 
 .service-um,
@@ -170,41 +170,38 @@ a {
     gap: 3px;
 }
 
-.arrow {
-    width: 50px;
-    height: 50px;
-    bottom: 40px;
-    right: 40px;
-    background-color: var(--dark-principal);
-    color: var(--white);
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    z-index: 100;
-    border: var(--dark-principal);
-    transition: 0.5s;
-  }
-  
-  .arrow:hover {
-    transform: scale(1.1);
-  }
-  
-  .arrow:active {
-    background-color: var(--dark-principal);
-  }
-  
-  .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 35%;
-    margin-bottom: 60%;
-    border-bottom: 15px solid var(--white);
-  }
+@media (max-width: 660px) {
+    body {
+        overflow: scroll;
+    }
 
-  #arrow-arrow-up div {
-    transform: rotate(180deg);
-  }
+    body::before {
+        background: linear-gradient(to right, var(--principal), var(--secondary));
+    }
+
+    .content-services {
+        flex-direction: column;
+    }
+
+    .containeres-textos {
+        text-align: center;
+        width: 30rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .containeres-textos {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .photo {
+        width: 320px;
+    }
+
+    .containeres-textos {
+        text-wrap: wrap;
+        width: 100%;
+    }
+}

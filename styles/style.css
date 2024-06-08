@@ -130,3 +130,18 @@ body::before {
 .container-textos-main h1 {
     color: var(--white);
 }
+
+
+@media (max-width: 510px) {
+    body {
+        overflow: scroll;
+    }
+
+    body::before {
+        background: linear-gradient(to right, var(--principal), var(--secondary));
+    }
+
+    .image-yago {
+        width: 250px;
+    }
+}

@@ -187,3 +187,18 @@ button {
     justify-content: center;
     gap: 10px;
     }
+
+
+    @media (max-width: 510px) {    
+        .container-buttons {
+            flex-direction: column;
+        }
+    
+        .main-content {
+            margin-top: -80px;
+        }
+    
+        .container-content h1 {
+            text-align: center;
+        }
+    }
